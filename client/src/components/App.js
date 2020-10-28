@@ -5,6 +5,7 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Landing from './Landing';
+import Test from './Test';
 import Dashboard from './Dashboard';
 import BlogNew from './blogs/BlogNew';
 import BlogShow from './blogs/BlogShow';
@@ -21,10 +22,12 @@ class App extends Component {
           <div>
             <Header />
             <Switch>
+              {/* <Route path="/test" component={Test} /> */}
               <Route path="/blogs/new" component={BlogNew} />
               <Route exact path="/blogs/:_id" component={BlogShow} />
               <Route path="/blogs" component={Dashboard} />
               <Route path="/" component={Landing} />
+
             </Switch>
           </div>
         </BrowserRouter>
